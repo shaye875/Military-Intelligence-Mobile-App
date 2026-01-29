@@ -19,60 +19,160 @@
             font-style: normal;
             font-variation-settings:
                 "wdth" 100;
-                display: grid;
+            display: grid;
             grid-template-columns: 15% 3% 64% 3% 15%;
             grid-template-rows: 5% 3% 74% 10% 8%;
             background-color: #0A0A0F;
-            
+
 
         }
-       header{
-        grid-column: 2/5;
-        grid-row: 1/2;
-        background-color: #05050A;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-       }
-       header svg{
-        background-color: #13CA43;
-        padding: 0.3rem;
-        border-radius: 1rem;
-        margin-left: 0.7%;
-       }
-       .green{
-        color: #13CA43;
-       }
-       header p{
-        font-size: 1.2rem;
-       }
-       header button{
-        background-color: #05050A;
-        border: solid 0.1rem;
-        padding: 0.3%;
-        width: 10%;
-        border-radius: 2rem;
-       }
+
+        header {
+            grid-column: 2/5;
+            grid-row: 1/2;
+            background-color: #05050A;
+            border: solid 0.1rem;
+            color: #11161A;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header svg {
+            background-color: #13CA43;
+            padding: 0.3rem;
+            border-radius: 1rem;
+            margin-left: 0.7%;
+        }
+
+        .green {
+            color: #13CA43;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        header button {
+            background-color: #05050A;
+            border: solid 0.1rem;
+            padding: 0.3%;
+            width: 10%;
+            border-radius: 2rem;
+        }
+
+        main {
+            grid-column: 3/4;
+            grid-row: 3/4;
+            background-color: #11161A;
+        }
+          
+        main .header{
+            background-color: #140F1E;
+            height: 17.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            border-radius: 1rem;
+        }
+
+        .radar,
+        .sweep {
+            position: absolute;
+        }
+
+        .radar {
+            overflow: hidden;
+            top: 22%;
+            left: 25%;
+            margin: -117px;
+            border: solid 0.1rem;
+            color: #13CA43;
+            width: 248px;
+            height: 248px;
+            border-radius: 50%;
+            box-shadow: 0 0 0 1px hsla(0, 7%, 80%, 0.5),
+                inset 0 0 0 1px hsla(0, 0%, 100%, 0.15);
+            background: repeating-radial-gradient(transparent 0 23px,
+                    #0000 27px),
+                linear-gradient(transparent 49.75%, #13CA43 50.25%, transparent 0) 50% no-repeat,
+                linear-gradient(90deg, transparent 49.75%, #13CA43 50.25%, transparent 0) 50% no-repeat,
+                linear-gradient(#333, #111);
+        }
+
+        .sweep {
+            box-sizing: border-box;
+            top: 16px;
+            left: 16px;
+            border-right: solid 1px hsla(145, 50%, 40%, 0.3);
+            width: 108px;
+            height: 108px;
+            border-radius: 100% 0 0 0;
+            color: #13CA43;
+            transform-origin: 100% 100%;
+            background: linear-gradient(50deg,
+                    rgba(34, 34, 34, 0) 56%,
+                    hsla(145, 50%, 40%, 1));
+            animation: sweep 5s infinite linear;
+        }
+
+        @keyframes sweep {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        .silver{
+            color: #42404C;
+        }
     </style>
 </head>
 
 <body>
-        <header>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="lucide lucide-shield-icon lucide-shield">
-                <path
-                    d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
-            </svg>
-            <p class="green">sigint ops</p>
-            <button class="green">• secure · online</button>
-        </header>
-        <main>
+    <header>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-shield-icon lucide-shield">
+            <path
+                d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+        </svg>
+        <p class="green">sigint ops</p>
+        <button class="green">• secure · online</button>
+    </header>
+    <main>
+        <div class="header">
+            <div class='radar'>
+                <div class='sweep'></div>
+            </div>
+        
+                <div>
+                    <h1 class="green">24</h1>
+                    <p class="silver">ACTIVE SIGNALS</p>
+                </div>
+                   <div>
+                    <h1 class="green">07</h1>
+                    <p class="silver">PRIORITY ALERTS</p>
+                </div>
 
-        </main>
-        <footer>
+        </div>
+        <div>
+            <button>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap-icon lucide-zap"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
+                <p>New Brief</p>
+            </button>
+            <button>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code-icon lucide-code"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg>
+                <p>Decode</p>
+            </button>
+            <button>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plane-icon lucide-plane"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
+                <p>Request Drone</p>
+            </button>
+        </div>
+    </main>
+    <footer>
 
-        </footer>
+    </footer>
     <!-- </section> -->
 </body>
 
