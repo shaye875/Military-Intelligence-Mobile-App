@@ -64,10 +64,12 @@
         main {
             grid-column: 3/4;
             grid-row: 3/4;
-            background-color: #11161A;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
-          
-        main .header{
+
+        main .header {
             background-color: #140F1E;
             height: 17.5rem;
             display: flex;
@@ -75,6 +77,8 @@
             justify-content: space-around;
             align-items: center;
             border-radius: 1rem;
+            border: solid 0.2rem;
+            color: #161F24;
         }
 
         .radar,
@@ -122,8 +126,90 @@
                 transform: rotate(360deg);
             }
         }
-        .silver{
+
+        .silver {
             color: #42404C;
+        }
+
+        .pink {
+            color: #A399A0;
+        }
+
+        .buttens {
+
+            display: flex;
+        }
+
+        .buttens button {
+            height: 3rem;
+            background-color: #140F1E;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 10%;
+            border-radius: 2rem;
+            margin-left: 1%;
+            border: solid 0.2rem;
+            color: #161F24;
+        }
+
+        .prusent {
+            display: flex;
+            justify-content: space-between;
+            height: 10rem;
+            /* background-color: red; */
+        }
+
+        .prusent div {
+            /* background-color: #140F1E; */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            /* align-items: center; */
+            height: 4rem;
+            width: 60%;
+        }
+
+        .box {
+            width: 10rem;
+            display: flex;
+            justify-content: space-between;
+            background-color: red;
+        }
+
+        .bakgreen {
+            height: 1%;
+            background-color: green;
+        }
+
+        .foont {
+            font-size: 0.8rem;
+        }
+
+        .btn {
+            width: 4rem;
+        }
+
+        .red {
+            color: #972346;
+        }
+        .thare{
+            border: solid 0.2rem;
+            color:#972346 ;
+            height: 2rem;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        footer{
+            grid-column: 1/12;
+            grid-row: 5/6;
+            display: flex;
+            justify-content: space-around;
+              background-color: #05050A;
+            border: solid 0.1rem;
+            color: #11161A;
         }
     </style>
 </head>
@@ -144,36 +230,128 @@
             <div class='radar'>
                 <div class='sweep'></div>
             </div>
-        
-                <div>
-                    <h1 class="green">24</h1>
-                    <p class="silver">ACTIVE SIGNALS</p>
-                </div>
-                   <div>
-                    <h1 class="green">07</h1>
-                    <p class="silver">PRIORITY ALERTS</p>
-                </div>
+
+            <div>
+                <h1 class="green">24</h1>
+                <p class="silver">ACTIVE SIGNALS</p>
+            </div>
+            <div>
+                <h1 class="green">07</h1>
+                <p class="silver">PRIORITY ALERTS</p>
+            </div>
 
         </div>
-        <div>
+        <div class="buttens">
             <button>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap-icon lucide-zap"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
-                <p>New Brief</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="#A399A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-zap-icon lucide-zap">
+                    <path
+                        d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z" />
+                </svg>
+                <p class="pink">New Brief</p>
             </button>
             <button>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code-icon lucide-code"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg>
-                <p>Decode</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="#A399A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-code-icon lucide-code">
+                    <path d="m16 18 6-6-6-6" />
+                    <path d="m8 6-6 6 6 6" />
+                </svg>
+                <p class="pink">Decode</p>
             </button>
             <button>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plane-icon lucide-plane"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
-                <p>Request Drone</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="#A399A0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-plane-icon lucide-plane">
+                    <path
+                        d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z" />
+                </svg>
+                <p class="pink">Request Drone</p>
             </button>
+        </div>
+        <div class="prusent">
+            <div>
+                <div class="box">
+                    <p class="btn">cariical</p>
+                    <p class="silver foont">in Progress</p>
+                </div>
+                <div>
+                    <p class="pink">Operation Nightfall</p>
+                </div>
+                <div>
+                    <div class="div">
+                        <div class="bakgreen"></div>
+                    </div>
+                    <p class="green">65%</p>
+                </div>
+            </div>
+            <div>
+                <div class="box">
+                    <button class="btn">HIGE</button>
+                    <p class="silver foont">Analyzing</p>
+                </div>
+                <div>
+                    <p class="pink">Signal intercept Alpha</p>
+                </div>
+                <div>
+                    <div class="div">
+                        <div class="bakgreen"></div>
+                    </div>
+                    <p class="green">40%</p>
+                </div>
+            </div>
+            <div>
+                <div class="box">
+                    <button class="green btn">MEDIUM</button>
+                    <p class="silver foont">Pending</p>
+                </div>
+                <div>
+                    <p class="pink">Assett Recovery</p>
+                </div>
+                <div>
+                    <div class="div">
+                        <div class="bakgreen"></div>
+                    </div>
+                    <p class="green">15%</p>
+                </div>
+            </div>
+            <div>
+                <div class="box">
+                    <button class="btn">HIGE</button>
+                    <p class="silver foony">Active</p>
+                </div>
+                <div>
+                    <p class="pink">Cyber Defense Grid</p>
+                </div>
+                <div>
+                    <div class="div">
+                        <div class="bakgreen"></div>
+                    </div>
+                    <p class="green">80%</p>
+                </div>
+            </div>
+        </div>
+        <div class="thare">
+            <p class="red">
+                THREAT DEECTED
+            </p>
         </div>
     </main>
     <footer>
-
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke=" #13CA43" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-activity-icon lucide-activity"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"/></svg>
+            <p class="green">Dashboard</p>
+          </div>
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#42404C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rss-icon lucide-rss"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>
+            <p class="silver">Feed</p>
+          </div>
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#42404C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text-icon lucide-file-text"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+            <p class="silver">bnef</p>
+          </div>
     </footer>
-    <!-- </section> -->
 </body>
 
 </html>
