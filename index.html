@@ -5,19 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
+        <div id="req">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
             class="lucide lucide-shield-icon lucide-shield">
             <path
                 d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
         </svg>
+    </div>
         <p class="green">sigint ops</p>
-        <button class="green">• secure · online</button>
+ 
+        <button class="green hed" id="hed">• secure · online</button>
+    
     </header>
     <main>
         <div class="header">
@@ -65,62 +69,68 @@
             </button>
         </div>
         <div class="prusent">
+
             <div>
-                <div class="box">
-                    <p class="btn">cariical</p>
+                <div class="left rigth" id="box">
+                    <button class="btn" id="btn1">cariical</button>
                     <p class="silver foont">in Progress</p>
                 </div>
-                <div>
+                <div class="left" id="left">
                     <p class="pink">Operation Nightfall</p>
                 </div>
-                <div>
-                    <div class="div">
-                        <div class="bakgreen"></div>
+                <div class="left rigth" id="prusent">
+                    <div id="div1">
+                        <p class="bakgreen"></p>
+                        <p class="bakblue"></p>
                     </div>
                     <p class="green">65%</p>
                 </div>
+
             </div>
             <div>
-                <div class="box">
-                    <button class="btn">HIGE</button>
+                <div class="left rigth" id="box">
+                    <button class="btn" id="btn2">HIGE</button>
                     <p class="silver foont">Analyzing</p>
                 </div>
-                <div>
+                <div class="left" id="left">
                     <p class="pink">Signal intercept Alpha</p>
                 </div>
-                <div>
-                    <div class="div">
-                        <div class="bakgreen"></div>
+                <div class="left rigth" id="prusent">
+                    <div id="div1">
+                        <p class="bakgreen" id="id2"></p>
+                        <p class="bakblue"></p>
                     </div>
                     <p class="green">40%</p>
                 </div>
             </div>
             <div>
-                <div class="box">
-                    <button class="green btn">MEDIUM</button>
+                <div class="left rigth" id="box">
+                    <button class="green btn" id="btn3">MEDIUM</button>
                     <p class="silver foont">Pending</p>
                 </div>
-                <div>
+                <div class="left" id="left">
                     <p class="pink">Assett Recovery</p>
                 </div>
-                <div>
-                    <div class="div">
-                        <div class="bakgreen"></div>
+                <div class="left rigth" id="prusent">
+                    <div id="div1">
+                        <p class="bakgreen" id="id3"></p>
+                        <p class="bakblue"></p>
                     </div>
                     <p class="green">15%</p>
                 </div>
             </div>
             <div>
-                <div class="box">
-                    <button class="btn">HIGE</button>
+                <div class="left rigth" id="box">
+                    <button class="btn" id="btn4">HIGE</button>
                     <p class="silver foony">Active</p>
                 </div>
-                <div>
+                <div class="left" id="left">
                     <p class="pink">Cyber Defense Grid</p>
                 </div>
-                <div>
-                    <div class="div">
-                        <div class="bakgreen"></div>
+                <div class="left rigth" id="prusent">
+                    <div id="div1" >
+                        <p class="bakgreen" id="id4"></p>
+                        <p class="bakblue"></p>
                     </div>
                     <p class="green">80%</p>
                 </div>
@@ -133,18 +143,44 @@
         </div>
     </main>
     <footer>
-          <div>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke=" #13CA43" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-activity-icon lucide-activity"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"/></svg>
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke=" #13CA43" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-activity-icon lucide-activity">
+                <path
+                    d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2" />
+            </svg>
             <p class="green">Dashboard</p>
-          </div>
-          <div>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#42404C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rss-icon lucide-rss"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>
+        </div>
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="#42404C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-rss-icon lucide-rss">
+                <path d="M4 11a9 9 0 0 1 9 9" />
+                <path d="M4 4a16 16 0 0 1 16 16" />
+                <circle cx="5" cy="19" r="1" />
+            </svg>
             <p class="silver">Feed</p>
-          </div>
-          <div>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#42404C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text-icon lucide-file-text"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+        </div>
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="#42404C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-file-text-icon lucide-file-text">
+                <path
+                    d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" />
+                <path d="M14 2v5a1 1 0 0 0 1 1h5" />
+                <path d="M10 9H8" />
+                <path d="M16 13H8" />
+                <path d="M16 17H8" />
+            </svg>
             <p class="silver">bnef</p>
-          </div>
+        </div>
+       <div id="dot1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#06AE38" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-dot-icon lucide-dot"><circle cx="12.1" cy="12.1" r="1"/></svg></div>
+       <div id="dot2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#06AE38" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-dot-icon lucide-dot"><circle cx="12.1" cy="12.1" r="1"/></svg></div>
+       <div id="dot3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#06AE38" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-dot-icon lucide-dot"><circle cx="12.1" cy="12.1" r="1"/></svg></div>
+       <div id="dot4"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#AE294C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-dot-icon lucide-dot"><circle cx="12.1" cy="12.1" r="1"/></svg></div>
+       <div id="dot5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#06AE38" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-dot-icon lucide-dot"><circle cx="12.1" cy="12.1" r="1"/></svg></div>
+       <img src="qwuestion.png" alt="">
     </footer>
 </body>
 
